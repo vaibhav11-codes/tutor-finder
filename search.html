@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TutorFinder — Find Tutors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">TutorFinder</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="search.html">Find Tutors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="search-intro">
+      <h1>Find Tutors</h1>
+      <p class="muted">Use the filters below to narrow results (static demo; no scripting).</p>
+
+      <!-- Fixed: added missing <form> tag and labels for accessibility -->
+      <form class="filters" method="get" action="search.html" aria-label="Search tutors">
+        <label>
+          <span class="sr-only">Subject</span>
+          <input type="text" name="q" placeholder="Subject (e.g. Math, Physics)" />
+        </label>
+
+        <label>
+          <span class="sr-only">Mode</span>
+          <select name="mode" aria-label="Mode">
+            <option value="">---Mode---</option>
+            <option value="online">Online</option>
+            <option value="in-person">In-person</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="sr-only">Sort</span>
+          <select name="sort" aria-label="Sort">
+            <option value="">---Price---</option>
+            <option value="price-asc">Price: low → high</option>
+            <option value="price-desc">Price: high → low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn">Apply</button>
+      </form>
+    </section>
+
+    <section class="results-grid" aria-live="polite">
+      <!-- Static demo cards. Replace with backend/generated markup for real site. -->
+      <article class="tutor">
+        <h2>Priya Sharma</h2>
+        <p class="meta">Subjects: Math, Physics • Mode: Online • Rate: ₹1,600/hr</p>
+        <p>High-school & competitive exam tutor, focused on problem solving and past papers.</p>
+        <p><a href="profile.html#priya" class="btn-outline">View Profile</a></p>
+      </article>
+
+      <article class="tutor">
+        <h2>Rahul Verma</h2>
+        <p class="meta">Subjects: English • Mode: In-person • Rate: ₹960/hr</p>
+        <p>Conversational and academic English coaching; speaking & writing practice.</p>
+        <p><a href="profile.html#rahul" class="btn-outline">View Profile</a></p>
+      </article>
+
+      <article class="tutor">
+        <h2>Dr. Anika Rao</h2>
+        <p class="meta">Subjects: Chemistry, Biology • Mode: Online • Rate: ₹2,000/hr</p>
+        <p>PhD-level tutoring for university and competitive exams.</p>
+        <p><a href="profile.html#anika" class="btn-outline">View Profile</a></p>
+      </article>
+
+      <article class="tutor">
+        <h2>Sunita Das</h2>
+        <p class="meta">Subjects: Computer Science • Mode: Online • Rate: ₹1,200/hr</p>
+        <p>Programming fundamentals, data structures and exam prep.</p>
+        <p><a href="profile.html#sunita" class="btn-outline">View Profile</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 TutorFinder</small>
+    </div>
+  </footer>
+</body>
+</html>
